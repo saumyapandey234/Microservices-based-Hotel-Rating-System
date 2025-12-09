@@ -58,13 +58,32 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+
         <!-- MongoDB Testing Support (embedded MongoDB) -->
-				<dependency>
-    				<groupId>de.flapdoodle.embed</groupId>
-    				<artifactId>de.flapdoodle.embed.mongo</artifactId>
-    				<version>4.11.0</version>
-    				<scope>test</scope>
-				</dependency>
+		<dependency>
+    		<groupId>de.flapdoodle.embed</groupId>
+    		<artifactId>de.flapdoodle.embed.mongo</artifactId>
+    		<version>4.11.0</version>
+    		<scope>test</scope>
+		</dependency>
+
+        <!-- Okta (correct version for Spring Boot 3) -->
+        <dependency>
+    		<groupId>com.okta.spring</groupId>
+    		<artifactId>okta-spring-boot-starter</artifactId>
+    		<version>3.0.6</version>
+		</dependency>
+
+         <!-- Security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
 
 
 
