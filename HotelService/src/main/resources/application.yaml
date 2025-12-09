@@ -8,6 +8,9 @@ spring:
     password: 12345
     driver-class-name: org.postgresql.Driver
 
+  config:
+    import: configserver:http://localhost:8091
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -16,11 +19,16 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+# eureka:
+#   instance:
+#     prefer-ip-address: true
+#   client:
+#     register-with-eureka: true
+#     fetch-registry: true
+#     service-url:
+#       defaultZone: http://localhost:8761/eureka/
+
+okta:
+  oauth2:
+    issuer: https://trial-6209588.okta.com/oauth2/default
+    audience: api://default
